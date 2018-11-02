@@ -1,5 +1,3 @@
-To execute test:
-
-Open Terminal
-Navigate to the config file
-Type "protractor config.js"
+Getting started
+Run the tests using the follow command:
+protractor config.js
