@@ -9,3 +9,5 @@ Registration Form
     - Note: You can configure a Node interpreter to run the tests by creating a Node runner 
     
     (see https://www.jetbrains.com/help/idea/run-debug-configuration-protractor.html)
+
+Have fun!
