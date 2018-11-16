@@ -1,4 +1,4 @@
-const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
+
 
 exports.config = {
 
@@ -6,6 +6,6 @@ exports.config = {
   specs: ["../specs/registration-specs.js"],
 
   onPrepare: function() {
-    jasmine.getEnv().addReporter(new SpecReporter({}));
+    
   },
 };

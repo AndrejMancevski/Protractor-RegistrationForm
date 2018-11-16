@@ -3,24 +3,27 @@ const RegistrationForm = require('../pageobjects/registration.js');
 describe('Register to Way2automation\n', function() {
 
   //TODO: Create an instance of registration class
+  var regForm = new RegistrationForm();
 
   it("Should navigate to Way2automation webpage ",function () {
-    //TODO: Navigate to Way2automation web page
+	regForm.get();
   });
   it("Should fill out the registration form",function () {
-    //TODO: Enter username,password and description
+	regForm.enterUsername();
+	regForm.enterPassword();
+	regForm.enterDescription();
   });
   it("Should click on login button",function () {
-    //TODO: Click on login button
+	regForm.clickLogin();
   });
   it("Should verify that the user is successfully logged in",function () {
-    //TODO: Verify successful login
+	regForm.verifySuccessfulLogin();
   });
   it("Should click on logout button",function () {
-    //TODO: Click on logout button
+	regForm.clickLogout();
   });
   it("Should verify that the user is successfully logged out",function () {
-    //TODO: Verify successful logout
+	regForm.verifySuccessfulLogout();
   });
 
 });

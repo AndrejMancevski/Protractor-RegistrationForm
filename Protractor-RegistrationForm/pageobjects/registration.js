@@ -1,30 +1,40 @@
+const chai = require('chai');
+chai.use(require('chai-smoothie'));
+
 var RegistrationFormObject = function() {
 
+	
+	
   //TODO: Locate all elements
+    var username = element(by.id('username'));
+	var pwd = element(by.id('password'));
+	var description = element(by.name('formly_1_input_username_0'));
+	var btnLogin = element(by.buttonText('Login'));
+	var logoutButton = element(by.linkText('Logout'));
 
   this.get = function() {
-    //TODO: Implement here...
+    browser.get('http://www.way2automation.com/angularjs-protractor/registeration/#/login')
   };
   this.enterUsername = function() {
-    //TODO: Implement here...
+	username.sendKeys('angular');
   };
   this.enterPassword = function() {
-    //TODO: Implement here...
+    pwd.sendKeys('password');
   };
   this.enterDescription = function() {
-    //TODO: Implement here...
+    description.sendKeys('My description');
   };
   this.clickLogin = function() {
-    //TODO: Implement here...
+	btnLogin.click();
   };
   this.verifySuccessfulLogin = function() {
-    //TODO: Implement here...
+    chai.assert.isNotNull(logoutButton, 'not logged in!');
   };
   this.clickLogout = function() {
-    //TODO: Implement here...
+    logoutButton.click();
   };
   this.verifySuccessfulLogout = function() {
-    //TODO: Implement here...
+    chai.assert.isNotNull(username, 'not logged out!')
   };
 };
 module.exports = RegistrationFormObject;
